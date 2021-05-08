@@ -2,11 +2,11 @@
 #include <string.h>
 int main(int argc, char* argv[])
 {
-    // argc 表示参数个数, *argv[]指针数组, 每一个指针指向一个字符串
+    // argc 表示参数个数, *argv[]命令参数数组, 第一个为项目名称，每一个指针指向一个字符串
     FILE* fp;
     int cnt = 0; // 统计数
 
-    if ((fp = fopen(argv[2], "r")) == NULL)
+    if ((fp = fopen(argv[2], "r")) == NULL)//如果未找到文件输出error
     {
         puts("error!\n");
         return 0;
